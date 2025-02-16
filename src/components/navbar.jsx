@@ -5,7 +5,7 @@ const Navbar = () => {
                     <img src="./logo.png" alt="logo" className="w-8 h-8" />
                     <span>Blogin</span>
                 </div>
-                {/* moblie menu */}
+                {/* moblie menu */} 
                 <div className="md:hidden ">m</div>
                 {/* destop menu */}
                 <div className="hidden md:flex">D</div>
