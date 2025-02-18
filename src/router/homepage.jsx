@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import Maincategory from "../components/maincategory";
 
 const Homepage = () => {
     return ( 
@@ -43,8 +44,9 @@ const Homepage = () => {
                 </Link>
                 </div>
                 
-            
+        <Maincategory/>    
         </div>
+
      );
 }
  
