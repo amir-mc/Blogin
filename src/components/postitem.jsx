@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import Image from "./image";
 
 const Postitem = () => { 
-    return (   
+    return ( 
         <div className="flex  flex-col mt-14 xl:flex-row gap-8 ">
         <div className="md:hidden xl:block">
             <Image src='postImg.jpeg' alt='post' className='rounded-3xl object-cover ' w='733'/>
