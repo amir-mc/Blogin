@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import Image from "./image";
 
-const Postitem = () => {
+const Postitem = () => { 
     return ( 
         <div className="flex  flex-col mt-14 xl:flex-row gap-8 ">
         <div className="md:hidden xl:block">
