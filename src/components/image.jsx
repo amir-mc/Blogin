@@ -9,7 +9,13 @@ const Image = ({src,alt,className,w,h}) => {
          loading='lazy'
          lgip={{active:true , quality:20}}
         width={w}
-        height={h}         
+        height={h} 
+        transformation={[
+            {
+                with:w,
+                height:h
+            }
+        ]}        
          />
      );
 }
