@@ -28,7 +28,7 @@ const SinglePage = () => {
                         alt='post'
 
                         />
-                    </div>
+                    </div> 
                 </div>
         </div>
      );
