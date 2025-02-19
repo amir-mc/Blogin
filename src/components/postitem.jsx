@@ -21,7 +21,7 @@ const Postitem = () => {
             <p>
                 Mollit est ea ut anim reprehenderit enim ullamco eiusmod. Do enim ut nostrud occaecat officia sunt exercitation exercitation elit ex proident ullamco nostrud ullamco. Cupidatat consequat aute qui consectetur reprehenderit eu laborum occaecat in in non. Commodo magna pariatur officia cillum mollit ea dolor.
             </p>
-            <Link to='/hava' className="text-purple-500 underline text-sm">Read more</Link>
+            <Link to='/test' className="text-purple-500 underline text-sm">Read more</Link>
         </div>
         </div>
      );

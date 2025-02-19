@@ -35,7 +35,7 @@ const router = createBrowserRouter([
     },
     {
       path: "/:slug",
-      element: <SinglePage/>
+      element: <SinglePage/>,    
     },
     {
       path: "/write",

@@ -22,7 +22,7 @@ const Featurepost = () => {
                 <div className="lg:h-1/3 flex justify-between gap-4">
                     <div className="w-1/2 aspect-video">
                     <Image
-                    className='rounded-3xl object-cover'
+                    className='rounded-3xl object-cover w-full h-full'
                     w='298'
                     src='featured2.jpeg'>
                     
@@ -34,7 +34,7 @@ const Featurepost = () => {
                                02. 
                             </h1>
                             <Link className="text-purple-500">web</Link>
-                            <sapn>1 day</sapn>
+                            <span>1 day</span>
                         </div>
                         <Link className="text-base sm:text-lg md:text-xl lg:text-lg xl:text-sm font-medium" to='/test'>Commodo dolor quis incididunt qui aliqua occaecat eu amet commodo. Elit tempor labore quis </Link>
                     </div>
@@ -42,9 +42,10 @@ const Featurepost = () => {
                  <div className="lg:h-1/3 flex justify-between gap-4">
                  <div className="w-1/2 aspect-video">
                     <Image
-                    className='rounded-3xl object-cover'
+                    className='rounded-3xl object-cover w-full h-full'
                     w='298'
-                    src='featured2.jpeg'>
+                    
+                    src='featured3.jpeg'>
                     
                     </Image>
                     </div>
@@ -54,7 +55,7 @@ const Featurepost = () => {
                                02. 
                             </h1>
                             <Link className="text-purple-500">web</Link>
-                            <sapn>1 day</sapn>
+                            <span>1 day</span>
                         </div>
                         <Link className="text-base sm:text-lg md:text-2xl lg:text-xl xl:text-sm font-medium" to='/test'>Commodo dolor quis incididunt qui aliqua occaecat eu amet commodo. Elit tempor labore quis </Link>
                     </div>
@@ -62,9 +63,9 @@ const Featurepost = () => {
                  <div className="lg:h-1/3 flex justify-between gap-4">
                  <div className="w-1/2 aspect-video">
                     <Image
-                    className='rounded-3xl object-cover'
+                    className='rounded-3xl object-cover w-full h-full'
                     w='298'
-                    src='featured2.jpeg'>
+                    src='featured4.jpeg'>
                     
                     </Image>
                     </div>
@@ -74,7 +75,7 @@ const Featurepost = () => {
                                02. 
                             </h1>
                             <Link className="text-purple-500">web</Link>
-                            <sapn>1 day</sapn>
+                            <span>1 day</span>
                         </div>
                         <Link className="text-base sm:text-lg md:text-2xl lg:text-xl xl:text-sm font-medium" to='/test'>Commodo dolor quis incididunt qui aliqua occaecat eu amet commodo. Elit tempor labore quis </Link>
                     </div> 
