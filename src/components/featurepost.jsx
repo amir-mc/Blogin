@@ -77,7 +77,7 @@ const Featurepost = () => {
                             <sapn>1 day</sapn>
                         </div>
                         <Link className="text-base sm:text-lg md:text-2xl lg:text-xl xl:text-sm font-medium" to='/test'>Commodo dolor quis incididunt qui aliqua occaecat eu amet commodo. Elit tempor labore quis </Link>
-                    </div>
+                    </div> 
                  </div>
        
            </div>
