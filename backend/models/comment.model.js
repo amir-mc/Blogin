@@ -18,7 +18,7 @@ const commentScema= new Schema(
             type:Schema.Type.ObjectId,
             ref:"Post",
             required:true
-        }
+        },
 
         desc:{
             type:String,

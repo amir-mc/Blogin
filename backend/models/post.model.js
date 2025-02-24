@@ -4,12 +4,12 @@ import mongoose from "mongoose";
 const postScema= new Schema(
     {   
         // esm fild :{
-        //     noe fild :String,
+        //     noe fild :String,  
         //     required:ejbari ,
         //     unique:khas 
         // }
         user:{
-            type:Schema.Type.ObjectId,
+            type:Schema.Types.ObjectId,
             ref:"User",
             required:true
         },
