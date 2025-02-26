@@ -3,16 +3,16 @@ import router from "./routes/user.routes.js";
 import postrouter from "./routes/post.routes.js";
 import commentrouter from "./routes/comment.routes.js";
 import connectDB from "./lib/connectDB.js";
+//import webhookrouter from "./routes/webhook.routes.js";
+import webhookRouter from "./routes/webhook.routes.js";
 
 const app = express();
+app.use('/webhooks', webhookRouter);
 app.use(express.json())
-
-// app.get("/test", (req, res) => {
-//     res.status(200).send("It isdd working");
-// });
-app.use('/user',router)
+app.use('/user',router) 
 app.use('/post',postrouter)
-app.use('/comment',commentrouter)
+app.use('/comment',commentrouter)   
+
 
 app.use((error,req,res,next)=>{
     res.status(error.status || 500)
@@ -23,7 +23,7 @@ app.use((error,req,res,next)=>{
     })
 })
 
-app.listen(3000, () => {
+app.listen(3000,'0.0.0.0', () => {
     connectDB()
     console.log("Server running on port 3000");
 

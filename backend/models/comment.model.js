@@ -9,13 +9,13 @@ const commentScema= new Schema(
         //     unique:khas 
         // }
 
-        user:{
-            type:Schema.Type.ObjectId,
+        user:{ 
+            type:Schema.Types.ObjectId,
             ref:"User",
             required:true
         },
         post:{
-            type:Schema.Type.ObjectId,
+            type:Schema.Types.ObjectId,
             ref:"Post",
             required:true
         },

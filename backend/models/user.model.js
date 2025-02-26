@@ -8,7 +8,11 @@ const userScema= new Schema(
         //     required:ejbari ,
         //     unique:khas 
         // }
-
+        clerkUserId:{
+            type:String,
+            required:true,
+            unique:true
+        },
         username:{
             type:String,
             required:true,

@@ -1,2 +1,13 @@
 nohup: ignoring input
 Server running on port 3000
+MongooseError: The `uri` parameter to `openUri()` must be a string, got "undefined". Make sure the first parameter to `mongoose.connect()` or `mongoose.createConnection()` is a string.
+    at NativeConnection.createClient (/root/blog/backend/node_modules/mongoose/lib/drivers/node-mongodb-native/connection.js:236:11)
+    at NativeConnection.openUri (/root/blog/backend/node_modules/mongoose/lib/connection.js:1069:34)
+    at Mongoose.connect (/root/blog/backend/node_modules/mongoose/lib/mongoose.js:446:15)
+    at connectDB (file:///root/blog/backend/lib/connectDB.js:6:24)
+    at Server.<anonymous> (file:///root/blog/backend/index.js:27:5)
+    at Server.f (/root/blog/backend/node_modules/once/once.js:25:25)
+    at Object.onceWrapper (node:events:639:26)
+    at Server.emit (node:events:524:28)
+    at emitErrorNT (node:net:1973:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
