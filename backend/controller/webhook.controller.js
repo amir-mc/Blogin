@@ -2,7 +2,7 @@ import User from "../models/user.model.js";
 import Post from "../models/post.model.js";
 import Comment from "../models/comment.model.js";
 import { Webhook } from "svix";
- 
+
 export const clerkWebHook = async (req, res) => {
   const WEBHOOK_SECRET = process.env.CLERK_WEBHOOK_SECRET;
 
@@ -11,7 +11,7 @@ export const clerkWebHook = async (req, res) => {
   }
 
   const payload = req.body;
-  const headers = req.headers; 
+  const headers = req.headers;
 
   const wh = new Webhook(WEBHOOK_SECRET);
   let evt;
