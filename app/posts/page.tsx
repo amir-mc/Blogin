@@ -1,10 +1,12 @@
 // app/page.tsx
-import Hero from '@/section/hero';
+
+import NewsList from "@/modules/view/newslist";
+
 
 export default function Home() {
   return (
     <div>
-      <Hero/>
+        <NewsList/>
     </div>
   );
 }
