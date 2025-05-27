@@ -1,5 +1,13 @@
+import InputData from "@/components/inputdata";
+
 const AdminNewslist = () => {
-    return (  );
+
+
+    return ( 
+        <div>
+            <InputData/>
+        </div>
+     );
 }
  
 export default AdminNewslist;

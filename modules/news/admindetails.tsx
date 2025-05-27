@@ -45,7 +45,7 @@ export function AdminDetails() {
         <div className="flex gap-2">
           <Input placeholder="Search products..." className="max-w-xs" />
           <Button asChild variant="default" size="sm">
-          <Link href={`/dashboard/product/new`}>
+          <Link href={`/dashboard/news/new`}>
             <Plus className="w-4 h-4 mr-2" />
             
             Add Product
