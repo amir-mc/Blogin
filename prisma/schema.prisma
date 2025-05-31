@@ -17,7 +17,7 @@ model Post {
   id        String     @id @default(uuid())
   title     String
   excerpt   String
-  mian   String
+  content    String
   blockquote String
   created_at  DateTime @default(now()) // Changed to DateTime type
   images  image[]  

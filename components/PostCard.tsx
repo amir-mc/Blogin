@@ -1,15 +1,10 @@
 // components/PostCard.tsx
 import { Card, CardContent } from '@/components/ui/card';
+import { PostCardProps } from '@/types';
 import Image from 'next/image';
 import Link from 'next/link';
 
-type PostCardProps = {
-  id?: number;
-  title: string;
-  excerpt: string;
-  image: string;
-  date: string;
-};
+
 
 export default function PostCard({ title, excerpt, image, date, id }: PostCardProps) {
   return (

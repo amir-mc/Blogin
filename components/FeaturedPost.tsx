@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 type FeaturedPostProps = {
-  id?: number;
+  id: string;  // Changed from number to string
   title: string;
   excerpt: string;
   image: string;

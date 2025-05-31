@@ -1,15 +1,22 @@
 import { featuredPost, posts } from '@/lib/post';
 import FeaturedPost from '@/components/FeaturedPost';
 import PostCard from '@/components/PostCard';
-const NewsList = () => {
+import { Post } from '@/types';
+
+type NewsListProps = {
+  posts: Post[];
+  featuredPost: Post;
+};
+
+const NewsList = ({ posts, featuredPost }: NewsListProps) => {
     return ( 
         <div>
       {/* Featured Post */}
       <FeaturedPost
-        id={featuredPost.id} // اضافه کردن id
+        id={featuredPost.id}  
         title={featuredPost.title}
         excerpt={featuredPost.excerpt}
-        image={featuredPost.image}
+        image={featuredPost.images[0]?.images || '/default-image.jpg'}
       /> 
 
       {/* Posts Grid */}
@@ -20,8 +27,8 @@ const NewsList = () => {
             id={post.id}
             title={post.title}
             excerpt={post.excerpt}
-            image={post.image}
-            date={post.date}
+            image={post.images[0]?.images || '/default-image.jpg'}
+            date={post.created_at.toLocaleDateString()}
           />
         ))}
       </div>
