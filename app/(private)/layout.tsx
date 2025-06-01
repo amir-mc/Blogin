@@ -1,4 +1,4 @@
-
+import { Toaster } from 'sonner';
 const  Layout = async({
     children,
   }: Readonly<{
@@ -9,6 +9,7 @@ const  Layout = async({
     return ( 
         <div>
              {children}
+             <Toaster position="top-center" richColors />
         </div>
      );
 }

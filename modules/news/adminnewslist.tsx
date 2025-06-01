@@ -1,11 +1,14 @@
-import InputData from "@/components/inputdata";
+import { InputData } from "@/components/inputdata";
+import { getPostbyId } from "../services";
 
-const AdminNewslist = () => {
-
+const AdminNewslist = async (props:{id:string}) => {
+    const {id}=props
+   const post = await getPostbyId(id)
 
     return ( 
+
         <div>
-            <InputData/>
+            <InputData post={post}/>
         </div>
      );
 }

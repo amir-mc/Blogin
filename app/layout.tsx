@@ -1,6 +1,7 @@
 // app/layout.tsx
 import './globals.css';
 import { Inter } from 'next/font/google';
+import { Toaster } from 'sonner';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -27,7 +28,10 @@ export default function RootLayout({
             </nav>
           </div>
         </header>
-        <main className="container mx-auto px-4 py-8">{children}</main>
+        <main className="container mx-auto px-4 py-8">{children}
+
+          <Toaster position="top-center" richColors />
+        </main>
       </body>
     </html>
   );
