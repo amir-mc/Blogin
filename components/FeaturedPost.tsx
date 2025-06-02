@@ -1,7 +1,7 @@
 // components/FeaturedPost.tsx
 import { Card, CardContent } from '@/components/ui/card';
-import Image from 'next/image';
 import Link from 'next/link';
+import ImageToolkits from './imagetoolkit';
 
 type FeaturedPostProps = {
   id: string;  // Changed from number to string
@@ -11,6 +11,7 @@ type FeaturedPostProps = {
 };
 
 export default function FeaturedPost({ title, excerpt, image, id }: FeaturedPostProps) {
+   console.log(image)
   return (
     <div className="flex flex-col md:flex-row gap-6 mb-12">
       <div className="md:w-1/2">
@@ -27,8 +28,8 @@ export default function FeaturedPost({ title, excerpt, image, id }: FeaturedPost
       <div className="md:w-1/2">
         <Card>
           <CardContent className="p-0">
-            <Image
-              src={image}
+            <ImageToolkits
+              src={image || 'https://placehold.co/600x400?text=No+Image'}
               alt={title}
               width={600}
               height={400}

@@ -1,17 +1,19 @@
 // components/PostCard.tsx
 import { Card, CardContent } from '@/components/ui/card';
 import { PostCardProps } from '@/types';
-import Image from 'next/image';
+
 import Link from 'next/link';
+import ImageToolkits from './imagetoolkit';
 
 
 
 export default function PostCard({ title, excerpt, image, date, id }: PostCardProps) {
+   console.log(image)
   return (
     <Card className="mb-6">
       <CardContent className="p-0">
-        <Image
-          src={image}
+        <ImageToolkits
+          src={image || 'https://placehold.co/600x400?text=No+Image'}
           alt={title}
           width={300}
           height={200}

@@ -26,3 +26,21 @@ export type Image = {
   images: string; // Change from 'url' to 'images' to match Prisma
     Postid: string | null;
 };
+
+export interface ImageKitUploadResponse {
+  fileId: string;
+  name: string;
+  url: string;
+  thumbnailUrl: string;
+  size: number;
+  filePath: string;
+  fileType: string;
+  tags?: string[];
+  src: string | null;
+  width: number;
+  height: number;
+  alt: string;
+  className: string;
+  fallbackSrc?: string;
+
+}

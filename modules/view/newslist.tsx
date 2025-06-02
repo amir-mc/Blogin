@@ -16,7 +16,7 @@ const NewsList = ({ posts, featuredPost }: NewsListProps) => {
         id={featuredPost.id}  
         title={featuredPost.title}
         excerpt={featuredPost.excerpt}
-        image={featuredPost.images[0]?.images || '/default-image.jpg'}
+        image={featuredPost.images[0]?.images || 'https://placehold.co/600x400?text=No+Image'}
       /> 
 
       {/* Posts Grid */}
@@ -27,7 +27,7 @@ const NewsList = ({ posts, featuredPost }: NewsListProps) => {
             id={post.id}
             title={post.title}
             excerpt={post.excerpt}
-            image={post.images[0]?.images || '/default-image.jpg'}
+            image={post.images[0]?.images || 'https://placehold.co/600x400?text=No+Image'}
             date={post.created_at.toLocaleDateString()}
           />
         ))}

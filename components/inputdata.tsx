@@ -7,6 +7,9 @@ import { useEffect, useState } from "react";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";
 import { upsertPost } from "@/modules/services";
+import ImageUpload from "./NewsImage";
+
+
 
 type PostFormData = {
     id?: string;
@@ -113,7 +116,12 @@ export function InputData(props: { post: PostFormData | null }) {
                         disabled={isSubmitting}
                     />
                 </div>
+                {/* IMAGETOOLKIT?? */}
+                <div>
+                        {post?.id && <ImageUpload newsId={post?.id} /> 
 
+                }
+                </div>
                 {/* Form Actions */}
                 <div className="flex justify-between items-center">
                     <Button 
