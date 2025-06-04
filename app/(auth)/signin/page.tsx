@@ -1,79 +1,31 @@
-"use client";
+'use server'
 
-import { signIn } from "next-auth/react";
-import { useRouter } from "next/navigation";
-import { useState } from "react";
 
-export default function SignInPage() {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [error, setError] = useState("");
-  const router = useRouter();
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setError("");
+import Sgininbut from "@/components/auth/sgin-in";
+import SgininbOut from "@/components/auth/sgin-out";
+import { auth } from "@/lib/auth";
+import Link from "next/link";
 
-    const result = await signIn("credentials", {
-      email,
-      password,
-      redirect: false,
-    });
-
-    if (result?.error) { 
-      setError(result.error);
-    } else {
-      router.push("/dashboard"); // Redirect to protected page after login
-    }
-  };
+export default async function LoginPage() {
 
   return (
-    <div className="min-h-screen flex items-center justify-center">
-      <div className="w-full max-w-md p-8 space-y-8 bg-white rounded-lg shadow">
-        <h1 className="text-2xl font-bold text-center">Admin Sign In</h1>
-        
-        {error && (
-          <div className="p-4 text-red-600 bg-red-100 rounded">
-            {error}
-          </div>
-        )}
+    <div className="min-h-screen flex items-center justify-center bg-gray-100">
+      <div className="bg-white p-8 rounded shadow-md w-96">
+        <h1 className="text-2xl font-bold mb-6 text-center">Login</h1>
 
-        <form className="space-y-6" onSubmit={handleSubmit}>
-          <div>
-            <label htmlFor="email" className="block mb-2 text-sm font-medium">
-              Email
-            </label>
-            <input
-              id="email"
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="w-full p-2 border rounded"
-              required
-            />
-          </div>
+       
+          <div className="mb-4">
 
-          <div>
-            <label htmlFor="password" className="block mb-2 text-sm font-medium">
-              Password
-            </label>
-            <input
-              id="password"
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              className="w-full p-2 border rounded"
-              required
-            />
+            <Sgininbut/>
+            
           </div>
-
-          <button
-            type="submit"
-            className="w-full p-2 bg-blue-600 text-white rounded hover:bg-blue-700"
-          >
-            Sign In
-          </button>
-        </form>
+         
+          <div className="mb-4">
+       
+        </div>
+         
+      
       </div>
     </div>
   );

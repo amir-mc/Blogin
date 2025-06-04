@@ -1,9 +1,14 @@
 import NextAuth from "next-auth";
-import { authConfig } from "./auth.config";
-
-// Initialize NextAuth
-const handler = NextAuth(authConfig);
-
-// Export the auth function and handlers separately
-export const auth = handler.auth;
-export const handlers = handler.handlers;
+import Github from "next-auth/providers/github"
+export const {auth,handlers,signIn,signOut}=NextAuth({
+    providers:[Github],
+  callbacks: {
+    async signIn({ user }) {
+        
+      if (user.email === "amirfooladi93@gmail.com") {
+        return true;
+      }
+      return false;
+    }
+  }
+})

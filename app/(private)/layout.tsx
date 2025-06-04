@@ -8,12 +8,7 @@ const  Layout = async({
     children: React.ReactNode;
   }>) => {
 
-    try {
-    const session = await auth();
-    
-    if (!session?.user) {
-      redirect("/signin");
-    } 
+   
     return ( 
       
         <div>
@@ -21,10 +16,6 @@ const  Layout = async({
              <Toaster position="top-center" richColors />
         </div>
      );
-} catch (error) {
-    console.error("Authentication error:", error);
-    redirect("/signin");
-  }
-}
+} 
  
 export default Layout;
