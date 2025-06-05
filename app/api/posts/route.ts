@@ -2,7 +2,7 @@
 import { prisma } from "@/lib/prisma";
 import { NextResponse } from "next/server";
 // app/api/posts/route.ts
-
+ 
 
 export async function GET() {
   //const { searchParams } = new URL(request.url);
