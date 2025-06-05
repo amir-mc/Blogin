@@ -18,14 +18,16 @@ const Newsdetails = ({ post }: NewsdetailsProps) => {
       {/* Main Image */}
       <Card className="mb-6">
         <CardContent className="p-0">
+          {post.images?.[0]?.images &&
           <Image
-            src={post.images?.[0]?.images}
+            src={post.images?.[0]?.images }
             alt={post.title}
             width={800}
             height={400}
             className="rounded-lg w-full h-96 object-cover"
             priority
           />
+}
         </CardContent>
       </Card>
 

@@ -18,7 +18,7 @@ const posts = await prisma.post.findMany({
 
   const featuredPost = posts[0];
   return (
-    <div>
+    <div className="pt-15 px-5">
         <NewsList posts={posts} featuredPost={featuredPost}/>
     </div>
   );

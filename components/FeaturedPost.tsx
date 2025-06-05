@@ -11,7 +11,7 @@ type FeaturedPostProps = {
 };
 
 export default function FeaturedPost({ title, excerpt, image, id }: FeaturedPostProps) {
-   console.log(image)
+   
   return (
     <div className="flex flex-col md:flex-row gap-6 mb-12">
       <div className="md:w-1/2">

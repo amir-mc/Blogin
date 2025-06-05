@@ -1,12 +1,13 @@
 import SgininbOut from "@/components/auth/sgin-out";
-import { auth } from "@/lib/auth";
 import { AdminDetails } from "@/modules/news/admindetails";
+import { getPosts } from "@/modules/services";
 
 const Page = async() => {
-    const sesstion= await auth()
+
+    const news= await getPosts()
     return ( 
         <div>
-            <AdminDetails/>
+            <AdminDetails news={news}/>
             <div className="flex justify-center py-5">
 
             <SgininbOut/>

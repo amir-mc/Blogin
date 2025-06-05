@@ -1,7 +1,6 @@
 // app/api/posts/route.ts
 import { prisma } from "@/lib/prisma";
 import { NextResponse } from "next/server";
-
 // app/api/posts/route.ts
 
 
@@ -9,47 +8,18 @@ export async function GET(request: Request) {
   const { searchParams } = new URL(request.url);
   
   // Get query parameters
-  const page = parseInt(searchParams.get('page') || '1');
-  const limit = parseInt(searchParams.get('limit') || '10');
-  const search = searchParams.get('search') || '';
-  const includeImages = searchParams.get('includeImages') === 'true';
+  // const page = parseInt(searchParams.get('page') || '1');
+  // const limit = parseInt(searchParams.get('limit') || '10');
+  // const search = searchParams.get('search') || '';
+  // const includeImages = searchParams.get('includeImages') === 'true';
 
   try {
     // Base query conditions
-    const where = {
-      OR: [
-        { title: { contains: search, mode: 'insensitive' } },
-        { excerpt: { contains: search, mode: 'insensitive' } },
-        { content: { contains: search, mode: 'insensitive' } }
-      ]
-    };
-
-    // Get paginated posts
-    const posts = await prisma.post.findMany({
-      where,
-      include: {
-        images: includeImages
-      },
-      orderBy: {
-        created_at: 'desc'
-      },
-      skip: (page - 1) * limit,
-      take: limit
-    });
-
-    // Get total count for pagination
-    const total = await prisma.post.count({ where });
-
-    return NextResponse.json({
-      success: true,
-      data: posts,
-      pagination: {
-        total,
-        totalPages: Math.ceil(total / limit),
-        currentPage: page,
-        limit
-      }
-    });
+  
+    const result = await prisma.post.findMany({include:{images:true}});
+        return NextResponse.json({
+            data: result
+        });
 
   } catch (error) {
     console.error('Error fetching posts:', error);

@@ -8,7 +8,7 @@ import ImageToolkits from './imagetoolkit';
 
 
 export default function PostCard({ title, excerpt, image, date, id }: PostCardProps) {
-   console.log(image)
+   
   return (
     <Card className="mb-6">
       <CardContent className="p-0">

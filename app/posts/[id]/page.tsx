@@ -21,7 +21,7 @@ export default async function PostPage({ params }: { params: Promise<{ id: strin
     }
 
     return (
-      <div>
+      <div className="pt-15 px-5">
         <Newsdetails post={post} />
       </div>
     );

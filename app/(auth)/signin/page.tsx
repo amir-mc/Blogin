@@ -3,9 +3,7 @@
 
 
 import Sgininbut from "@/components/auth/sgin-in";
-import SgininbOut from "@/components/auth/sgin-out";
-import { auth } from "@/lib/auth";
-import Link from "next/link";
+
 
 export default async function LoginPage() {
 

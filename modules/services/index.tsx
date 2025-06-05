@@ -1,5 +1,6 @@
 "use server"
 
+
 import { prisma } from "@/lib/prisma"
 import { revalidatePath } from "next/cache"
 import { redirect } from "next/navigation"
@@ -52,6 +53,11 @@ export const upsertPost = async (post: {
 }
 
 export const deletePost = async (id: string) => {
+    const post = await prisma.post.findUnique({ where: { id } })
+    if (!post) {
+        throw new Error("Post not found")
+    }
+
     await prisma.post.delete({ where: { id } })
-    redirect('/dashboard/news')
+    
 }
