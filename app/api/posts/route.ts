@@ -4,9 +4,9 @@ import { NextResponse } from "next/server";
 // app/api/posts/route.ts
 
 
-export async function GET(request: Request) {
+export async function GET() {
   //const { searchParams } = new URL(request.url);
-  console.log(request)
+
   // Get query parameters
   // const page = parseInt(searchParams.get('page') || '1');
   // const limit = parseInt(searchParams.get('limit') || '10');
